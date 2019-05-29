@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  display:flex;
+  justify-content: space-between;
+}
+
+.leftContent {
+  width: 60%;
+}
+
+.rightContent {
+  width: 30%;
+}
+
+.rightContentBox {
+  border: 1px solid #d3d3d3;
 }
 
 .App-logo {

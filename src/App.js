@@ -1,24 +1,80 @@
 import React from 'react';
-import logo from './logo.svg';
+import Sticky from './Sticky';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="leftContent">
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+        <p>This is content</p>
+      </div>
+      <div className="rightContent">
+        <p>this is dummy top content</p>
+        <p>this is dummy top content</p>
+        <p>this is dummy top content</p>
+        <Sticky offset={30}>
+        <div className="rightContentBox">
+          <p>This is first content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is right content</p>
+          <p>This is last content</p>
+        </div>
+        </Sticky>
+
+
+      </div>
     </div>
   );
 }
