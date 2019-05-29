@@ -16,17 +16,13 @@ class Sticky extends React.PureComponent {
     super(props);
     this.state = {
       position: 'static',
-      top: 0,
-      bottom: 0,
     };
     this.status = 'static';
   }
 
   componentDidMount() {
-    this.currentState = 'initial';
     this.$sticky = document.querySelector('#sticky');
     this.$document = document.documentElement;
-    this.releasedTop = 0;
 
     this.updateDimensions = this.updateDimensions.bind(this);
     this.scrollHandler = this.scrollHandler.bind(this);
@@ -34,9 +30,16 @@ class Sticky extends React.PureComponent {
 
     this.onScroll = debounce(this.scrollHandler, 10);
     this.onResize = debounce(this.resizeHandler, 10);
-    this.updateDimensions();
+
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', this.onResize);
+
+    this.updateDimensions();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
   }
 
   updateDimensions = () => {
